@@ -1,0 +1,25 @@
+<%= form_with model: @transphoto, local: true do |f|%>
+  <div class="field">
+    <%= f.label :title, "title" %><br />
+    <%= f.text_field :title, id:"transphoto_title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :from_to, "transphoto" %><br />
+    <%= f.text_area :from_to, class: :form__text, id:"transphoto_from_to" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :message, "message" %><br />
+    <%= f.text_area :message, class: :form__text, id:"transphoto_message" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "画像" %><br />
+    <%= f.file_field :image, id:"transphoto_image" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
