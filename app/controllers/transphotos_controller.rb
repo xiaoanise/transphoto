@@ -21,8 +21,8 @@ class TransphotosController < ApplicationController
 
   def show
     @transphoto = Transphoto.find(params[:id])
-    # @comment = Comment.new
-    # @comments = @transphoto.comments.includes(:user)
+    @comment = Comment.new
+    @comments = @transphoto.comments.includes(:user)
   end
 
   def edit

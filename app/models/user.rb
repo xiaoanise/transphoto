@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :transphotos
+  has_many :comments
 
   validates :nickname, presence: true
   validates :introduction, presence: true
