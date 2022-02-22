@@ -31,30 +31,26 @@
         </div>
       </div>
       <div class="transphoto__comments">
-        <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
         <% if user_signed_in? %>
-          <%= form_with(model: [@transphoto], local: true) do |f|%>
+          <%= form_with(model: [@transphoto, @comment], local: true) do |f|%>
             <div class="field">
-              <%= f.label :translation, "翻訳" %><br />
-              <%= f.text_field :translation, id:"comment_translation" %>
+              <%= f.label :content, "翻訳" %><br />
+              <%= f.text_field :content, id:"comment_content" %>
             </div>
             <div class="actions">
               <%= f.submit "送信する", class: :form__btn  %>
             </div>
           <% end %>
         <% end %>
-        <%# // ログインしているユーザーには上記を表示する %>
         <ul class="comments_lists">
-          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
             <li class="comments_list">
-              <%# @comments.each do |comment| %>
+              <% @comments.each do |comment| %>
                 <p>
-                  <%#= link_to "#{comment.user.name}", user_path(comment.user), class: :comment_user %>
-                  <%#= comment.translation %>
+                  <%= link_to "#{comment.user.nickname}", user_path(comment.user), class: :comment_user %>
+                  <%= comment.content %>
                 </p>
-              <%# end %>
+              <% end %>
             </li>
-          <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
         </ul>
       </div>
     </div>

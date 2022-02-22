@@ -35,7 +35,7 @@
 
 | Column       | Type       | Options                        |
 | -------      | ---------- | ------------------------------ |
-| translation  | text       | null: false                    |
+| text         | text       | null: false                    |
 | transphoto   | references | null: false, foreign_key: true |
 | user         | references | null: false, foreign_key: true |
 
