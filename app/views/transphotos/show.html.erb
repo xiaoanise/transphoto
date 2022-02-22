@@ -1,0 +1,62 @@
+<main class="main">
+  <div class="inner">
+    <div class="transphoto__wrapper">
+      <p class="transphoto__hedding">
+        <%= "#{@transphoto.title}"%>
+      </p>
+      <%= link_to "by #{@transphoto.user.nickname}", user_path(@transphoto.user), class: :transphoto__user %>
+
+      <% if user_signed_in? && current_user.id == @transphoto.user_id %>
+        <div class="transphoto__manage">
+          <%= link_to "編集する", edit_transphoto_path, class: :transphoto__btn %>
+          <%= link_to "削除する", transphoto_path(@transphoto.id), method: :delete, class: :transphoto__btn %>
+        </div>
+      <% end %>
+
+      <div class="transphoto__image">
+        <%= image_tag @transphoto.image.variant(resize: '500x500') %>
+      </div>
+      <div class="transphoto__body">
+        <div class="transphoto__detail">
+          <p class="detail__title">タイトル</p>
+          <p class="detail__message">
+            <%= "#{@transphoto.from_to}" %>
+          </p>
+        </div>
+        <div class="transphoto__detail">
+          <p class="detail__title">メッセージ</p>
+          <p class="detail__message">
+            <%= "#{@transphoto.message}" %>
+          </p>
+        </div>
+      </div>
+      <div class="transphoto__comments">
+        <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
+        <% if user_signed_in? %>
+          <%= form_with(model: [@transphoto], local: true) do |f|%>
+            <div class="field">
+              <%= f.label :translation, "翻訳" %><br />
+              <%= f.text_field :translation, id:"comment_translation" %>
+            </div>
+            <div class="actions">
+              <%= f.submit "送信する", class: :form__btn  %>
+            </div>
+          <% end %>
+        <% end %>
+        <%# // ログインしているユーザーには上記を表示する %>
+        <ul class="comments_lists">
+          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+            <li class="comments_list">
+              <%# @comments.each do |comment| %>
+                <p>
+                  <%#= link_to "#{comment.user.name}", user_path(comment.user), class: :comment_user %>
+                  <%#= comment.translation %>
+                </p>
+              <%# end %>
+            </li>
+          <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
