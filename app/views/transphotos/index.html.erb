@@ -3,7 +3,8 @@
     <% if user_signed_in? %>
       <div class="greeting">
         Hello~
-        <%= link_to "#{current_user.nickname}", user_path(current_user), class: :greeting__link%>
+        <%= link_to "#{current_user.nickname}", user_path(current_user), class: :greeting__link%>,
+        simply upload the photo and its contents will be translated!
       </div>
     <% end %>
     <div class="card__wrapper">
