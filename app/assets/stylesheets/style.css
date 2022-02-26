@@ -88,7 +88,7 @@ a {
 }
 
 .form__text {
-  width: 50%;
+  width: 60%;
 }
 
 .field{
@@ -165,7 +165,7 @@ a {
 .transphoto__wrapper{
   min-height: calc(100vh - 161px);
 }
-.transphoto__hedding{
+.transphoto__heading{
   font-size: 24px;
   font-weight: bold;
   text-align: center;

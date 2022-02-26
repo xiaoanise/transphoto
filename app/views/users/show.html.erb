@@ -2,33 +2,32 @@
   <div class="inner">
     <div class="user__wrapper">
       <h2 class="page-heading">
-        <%= "ユーザー名さんの情報"%>
+        <%= "About user"%>
       </h2>
       <table class="table">
         <tbody>
           <tr>
-            <th class="table__col1">ニックネーム</th>
+            <th class="table__col1">Nickname</th>
             <td class="table__col2"><%= "#{@user.nickname}" %></td>
           </tr>
           <tr>
-            <th class="table__col1">自己紹介</th>
+            <th class="table__col1">Self introduction</th>
             <td class="table__col2"><%= "#{@user.introduction}" %></td>
           </tr>
           <tr>
-            <th class="table__col1">言語</th>
+            <th class="table__col1">Lanuage(s) user can speak</th>
             <td class="table__col2"><%= "#{@user.language}" %></td>
           </tr>
           <tr>
-            <th class="table__col1">趣味</th>
+            <th class="table__col1">Hobby</th>
             <td class="table__col2"><%= "#{@user.hobby}" %></td>
           </tr>
         </tbody>
       </table>
       <h2 class="page-heading">
-        <%= "ユーザー名さんのトランスフォト"%>
+        <%= "User's transphoto(s)"%>
       </h2>
       <div class="user__card">
-        <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
         <%= render partial: 'transphotos/transphoto', collection: @user.transphotos %>
       </div>
     </div>
