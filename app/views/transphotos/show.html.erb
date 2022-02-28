@@ -14,7 +14,7 @@
       <% end %>
 
       <div class="transphoto__image">
-        <%= image_tag @transphoto.image.variant(resize: '500x500') %>
+        <%= image_tag @transphoto.image.variant(resize: '800x800') %>
       </div>
       <div class="transphoto__body">
         <div class="transphoto__detail">
@@ -47,7 +47,7 @@
               <% @comments.each do |comment| %>
                 <p>
                   <%= link_to "#{comment.user.nickname}", user_path(comment.user), class: :comment_user %>
-                  <%= comment.content %>
+                  <%= simple_format(comment.content) %>
                 </p>
               <% end %>
             </li>
