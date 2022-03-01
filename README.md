@@ -30,6 +30,7 @@ https://transphoto.herokuapp.com/
 個人的な経験から、日本語の読み方がわからないと、グーグル翻訳が使えない時があったことで、もし写真だけを撮って、翻訳していただくと助かると思っている。
 
 # 洗い出した要件
+[![Image from Gyazo](https://i.gyazo.com/f73cd9d99d93ecbfd1b6cb92bda4dc30.png)](https://gyazo.com/f73cd9d99d93ecbfd1b6cb92bda4dc30)
 
 # 実装した機能についての画像やGIFおよびその説明
 ## トップページ
