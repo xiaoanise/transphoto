@@ -3,7 +3,8 @@
   <div class="card__body">
     <%= link_to "#{transphoto.title}", transphoto_path(transphoto.id), method: :get, class: :card__title%>
     <p class="card__summary">
-      <%= link_to "#{transphoto.from_to}" %>
+      <%= link_to "#{transphoto.from_to}" %><br>
+      <%= "#{transphoto.comments.count} comment(s)" %> 
     </p>
     <%= link_to "by #{transphoto.user.nickname}", user_path(transphoto.user), class: :card__user %>
    </div>
