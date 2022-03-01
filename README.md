@@ -8,17 +8,17 @@ TransPhoto
 Herokuによるデプロイ
 https://transphoto.herokuapp.com/
 
-・Basic認証ID：admin
-・Basic認証パスワード：2222
+- Basic認証ID：admin
+- Basic認証パスワード：2222
 
 # テスト用アカウント
 翻訳者用
-・メールアドレス：aaa@aaa.com
-・パスワード：aaaaaa
+- メールアドレス：aaa@aaa.com
+- パスワード：aaaaaa
 
 投稿者用
-・メールアドレス：bbb@bbb.com
-・パスワード：bbbbbb
+- メールアドレス：bbb@bbb.com
+- パスワード：bbbbbb
 
 # 利用方法
 ## 目標投稿
@@ -27,7 +27,7 @@ https://transphoto.herokuapp.com/
 3. 翻訳した内容をコメントとして投稿する
 
 # アプリケーションを作成した背景
-個人的な経験から、日本語の読み方がわからないと、グーグル翻訳が使えない時があったことで、もし写真だけを撮って、翻訳していただくと助かると思う。
+個人的な経験から、日本語の読み方がわからないと、グーグル翻訳が使えない時があったことで、もし写真だけを撮って、翻訳していただくと助かると思っている。
 
 # 洗い出した要件
 
@@ -49,20 +49,20 @@ https://transphoto.herokuapp.com/
 [![Image from Gyazo](https://i.gyazo.com/a1921d63cb4a6bbcfb14b5d7f2b69110.png)](https://gyazo.com/a1921d63cb4a6bbcfb14b5d7f2b69110)
 
 # 開発環境
-・フロントエンド
-・バックエンド
-・テスト
+- フロントエンド
+- バックエンド
+- テスト
 
 # ローカルでの動作方法
-% git clone https://github.com/xiaoanise/transphoto.git
-% cd transphoto
-% bundle install
-% rails db:create
-% rails db:migrate
-% yarn install
+- % git clone https://github.com/xiaoanise/transphoto.git
+- % cd transphoto
+- % bundle install
+- % rails db:create
+- % rails db:migrate
+- % yarn install
 
 # 工夫したポイント
-
+今まで習ったスキルを活用し、全面的に理解することができた。エラーメッセージがある時、あきらめず解決しましたので、マインドが強くなった。
 
 # テーブル設計
 
