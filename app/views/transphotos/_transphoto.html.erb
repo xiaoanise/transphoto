@@ -4,8 +4,16 @@
     <%= link_to "#{transphoto.title}", transphoto_path(transphoto.id), method: :get, class: :card__title%>
     <p class="card__summary">
       <%= link_to "#{transphoto.from_to}" %><br>
-      <%= "#{transphoto.comments.count} comment(s)" %> 
+      <% if transphoto.comments.count == 0 %>
+        <font color="red"><%= "#{transphoto.comments.count} translation" %></font>
+      <% else %> 
+        <%= "#{transphoto.comments.count} translation(s)" %>
+      <% end %><br>
+      <%= transphoto.updated_at.strftime("%Y-%m-%d %H:%M") %>
     </p>
     <%= link_to "by #{transphoto.user.nickname}", user_path(transphoto.user), class: :card__user %>
-   </div>
+    <p class="actions">
+      <%= link_to "Translate", transphoto_path(transphoto.id), class: :form__btn  %>
+    </p>
+  </div>
 </div>

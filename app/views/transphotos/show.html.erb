@@ -44,10 +44,17 @@
         <% end %>
         <ul class="comments_lists">
             <li class="comments_list">
-              <% @comments.each do |comment| %>
+              <% @transphoto.comments.each do |comment| %>
                 <p>
                   <%= link_to "#{comment.user.nickname}", user_path(comment.user), class: :comment_user %>
+                  <%= comment.updated_at.strftime("%Y-%m-%d %H:%M") %><br>
                   <%= simple_format(comment.content) %>
+                  
+                  <% if user_signed_in? && current_user.id == comment.user_id %>
+                    <div class="comment__manage">
+                      <%= link_to "Delete", transphoto_comment_path(@transphoto, comment), method: :delete, class: :comment__btn %>
+                     </div>
+                  <% end %>
                 </p>
               <% end %>
             </li>

@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!, only: [:create,:destroy]
+
   def create
     @transphoto = Transphoto.find(params[:transphoto_id])
     @comments = @transphoto.comments
@@ -9,6 +11,13 @@ class CommentsController < ApplicationController
     else
       render template: 'transphotos/show'
     end
+  end
+
+  def destroy
+    @transphoto = Transphoto.find(params[:transphoto_id])
+    @comment = @transphoto.comments.find(params[:id])
+    @comment.destroy
+    redirect_to transphoto_path(@transphoto.id)
   end
 
   private
