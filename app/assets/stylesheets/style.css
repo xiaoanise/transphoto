@@ -38,7 +38,7 @@ a {
 /* ヘッダー */
 
 .header {
-  background-color: #89b0d5;
+  background-color: #f1f8fe;
   margin-bottom: 48px;
   padding: 20px 0;
 
@@ -59,23 +59,23 @@ a {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 1em;
-  color: #f5f8fb;
+  color: #87CEFA;
   text-decoration: none;
   user-select: none;
-  border: 1px #f5f8fb solid;
+  border: 1px #87CEFA solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
 .nav__btn:hover{
   color: #fff;
-  background: #f5f8fb;
+  background: #87CEFA;
 }
 
 .nav__logout{
   display: inline-block;
   padding: 0.5em 1.7em;
   font-size: 1em;
-  color: #f5f8fb;
+  color: #87CEFA;
   text-decoration: none;
   user-select: none;
 }
